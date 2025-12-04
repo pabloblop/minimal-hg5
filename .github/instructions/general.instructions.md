@@ -53,8 +53,6 @@ minimal-hg5/
 ```
 components/
 ├── docs/
-│   ├── header.html             # Header para docs
-│   ├── footer.html             # Footer para docs
 │   └── sidebar.html            # Sidebar de navegación
 └── dutti/
     ├── header.html             # Header para dutti
@@ -110,11 +108,12 @@ npm run clean                   # Limpiar _site/
 - **Headings jerárquicos**: No saltar niveles (h1 → h2 → h3, NO h1 → h3)
 
 ### 4. Layouts
-- **Docs**: Layout con header, sidebar + content, footer
-- **Dutti**: Layout con header + content, footer (sin sidebar)
+- **Docs**: Layout con sidebar + main (sin header ni footer)
+- **Dutti**: Layout con header + main + footer (sin sidebar)
 - **Rutas de includes**: Usar rutas específicas:
-  - `{% include 'components/docs/header.html' %}`
+  - `{% include 'components/docs/sidebar.html' %}`
   - `{% include 'components/dutti/header.html' %}`
+  - `{% include 'components/dutti/footer.html' %}`
 
 ### 5. Front Matter
 Formato para páginas:
