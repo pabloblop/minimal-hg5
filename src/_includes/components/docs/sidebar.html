@@ -1,21 +1,29 @@
-<aside class="p-16 md:p-24" style="background-color: var(--hg-color-light-grey); border-right: 2px solid var(--hg-color-grey); width: 100%; max-width: 250px; min-height: 400px;">
+<aside class="docs-aside p-16 md:p-24">
   <nav>
-    <ul class="list-clear">
-      <li class="mb-8">
-        <a href="/docs/introduccion/" class="text-m" style="color: var(--hg-color-primary); text-decoration: none;">Introducción</a>
-      </li>
-      <li class="mb-8">
-        <a href="/docs/guia/" class="text-m" style="color: var(--hg-color-primary); text-decoration: none;">Guía</a>
-      </li>
-      <li class="mb-8">
-        <a href="/docs/referencia/" class="text-m" style="color: var(--hg-color-primary); text-decoration: none;">Referencia</a>
-      </li>
-      <li class="mb-8">
-        <a href="/docs/api/" class="text-m" style="color: var(--hg-color-primary); text-decoration: none;">API</a>
-      </li>
-      <li>
-        <a href="/docs/ejemplos/" class="text-m" style="color: var(--hg-color-primary); text-decoration: none;">Ejemplos</a>
-      </li>
-    </ul>
+    <section class="mb-24">
+      <h2 class="h4 mb-12">Components</h2>
+      <ul class="list-clear">
+        {%- for page in collections.all %}
+          {%- if page.url and page.url.startsWith('/docs/') and page.url != '/docs/' %}
+        <li class="mb-8">
+          <a href="{{ page.url }}" class="text-m">{{ page.data.title }}</a>
+        </li>
+          {%- endif %}
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="h4 mb-12">Templates</h2>
+      <ul class="list-clear">
+        {%- for page in collections.all %}
+          {%- if page.url and page.url.startsWith('/dutti/') %}
+        <li class="mb-8">
+          <a href="{{ page.url }}" class="text-m">{{ page.data.title }}</a>
+        </li>
+          {%- endif %}
+        {%- endfor %}
+      </ul>
+    </section>
   </nav>
 </aside>

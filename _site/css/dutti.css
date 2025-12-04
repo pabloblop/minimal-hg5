@@ -1840,6 +1840,24 @@ a:hover {
 header nav a:hover {
   opacity: 0.7;
 }
+header {
+  background-color: var(--hg-color-primary);
+  color: var(--hg-color-white);
+  border-bottom: 2px solid var(--hg-color-dark-grey);
+}
+header a {
+  color: var(--hg-color-white);
+}
+footer {
+  background-color: var(--hg-color-primary);
+  color: var(--hg-color-white);
+}
+footer a {
+  color: var(--hg-color-white);
+}
+.dutti-body {
+  min-height: 100vh;
+}
 .list-clear {
   list-style: none;
   padding: 0;

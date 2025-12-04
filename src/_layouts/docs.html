@@ -6,12 +6,12 @@
   <title>{{ title }} - Documentación</title>
   <link rel="stylesheet" href="/css/docs.css">
 </head>
-<body class="hg-d-flex hg-flex-column" style="min-height: 100vh;">
+<body class="hg-d-flex hg-flex-column hg-min-h-100dvh text-m">
   <div class="hg-d-flex hg-grow-1">
     {% include 'components/docs/sidebar.html' %}
     <main class="hg-grow-1">
       <article class="p-16 md:p-24">
-        <h1 class="h1 mb-24">{{ title }}</h1>
+        <h1 class="h2">{{ title }}</h1>
         {{ content | safe }}
       </article>
     </main>
