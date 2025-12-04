@@ -1,6 +1,11 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "outputDirectory": "_site"
+  "outputDirectory": "_site",
+  "framework": "other",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "regions": ["iad1"]
 }
 
