@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "outputDirectory": "_site",
-  "framework": "other",
+  "framework": "eleventy",
   "env": {
     "NODE_ENV": "production"
   },
