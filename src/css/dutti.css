@@ -1,0 +1,36 @@
+@import 'holygrail5/dist/output.css';
+
+/* Dutti styles */
+:root {
+  --hg-color-primary: #000000;
+  --hg-color-secondary: #f4f2ed;
+  --hg-color-white: #ffffff;
+  --hg-color-black: #000000;
+  --hg-color-dark-grey: #737373;
+  --hg-color-grey: #a9a9a9;
+  --hg-color-light-grey: #f0f0f0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--hg-color-primary);
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+header nav a:hover {
+  opacity: 0.7;
+}
+
+.list-clear {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss src/css/style.css -o _site/css/style.css",
+    "build:css": "postcss src/css/docs.css -o _site/css/docs.css && postcss src/css/dutti.css -o _site/css/dutti.css",
     "dev": "npm run build:css && eleventy --serve",
     "build": "npm run build:css && eleventy",
     "clean": "rm -rf _site"
