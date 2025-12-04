@@ -42,6 +42,8 @@ permalink: /docs/mi-pagina/
 </section>
 ```
 
+**IMPORTANTE**: No usar CSS inline (`style="..."`). Todo debe estar en `docs.css`.
+
 ### 3. Clases HolyGrail5 Disponibles
 - **Spacing**: `mb-8`, `mb-16`, `p-16`, `p-24`
 - **Typography**: `h1`, `h2`, `h3`, `text-m`, `text-s`
@@ -87,6 +89,18 @@ El archivo `src/css/docs.css`:
 - Ubicado en: `src/_includes/components/docs/footer.html`
 - Copyright: "© 2025 Documentación Dutti"
 - Links legales
+
+## Accesibilidad
+
+**OBLIGATORIO cumplir WCAG 2.1 nivel AA:**
+- ✅ Usar HTML semántico: `<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`
+- ✅ Roles ARIA: `role="navigation"` en sidebars y navegaciones
+- ✅ Etiquetas descriptivas en todos los enlaces
+- ✅ Contraste mínimo 4.5:1 (texto normal) / 3:1 (textos grandes)
+- ✅ Jerarquía de headings: h1 → h2 → h3 (no saltarse niveles)
+- ✅ Alt text en todas las imágenes
+- ✅ Navegación por teclado funcional
+- ✅ Formularios con `<label for="id">`
 
 ## Convenciones
 

@@ -54,6 +54,8 @@ title: Título de la Página
 </div>
 ```
 
+**IMPORTANTE**: No usar CSS inline (`style="..."`). Todo debe estar en `dutti.css`.
+
 ### 3. Clases HolyGrail5 Disponibles
 - **Spacing**: `mb-8`, `mb-16`, `mb-24`, `p-16`, `p-24`
 - **Typography**: `h1`, `h2`, `h3`, `text-l`, `text-m`, `text-s`
@@ -95,6 +97,19 @@ Editar `src/css/dutti.css` para cambiar:
 - Efectos hover
 - Transiciones
 
+## Accesibilidad
+
+**OBLIGATORIO cumplir WCAG 2.1 nivel AA:**
+- ✅ Usar HTML semántico: `<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`
+- ✅ Roles ARIA cuando sea necesario: `aria-label`, `aria-describedby`
+- ✅ Etiquetas descriptivas en navegación y links principales
+- ✅ Contraste mínimo 4.5:1 (texto normal) / 3:1 (textos grandes)
+- ✅ Jerarquía de headings: h1 → h2 → h3 (no saltarse niveles)
+- ✅ Alt text descriptivo en todas las imágenes
+- ✅ Botones con labels claros
+- ✅ Navegación por teclado (Tab, Enter, Esc)
+- ✅ Formularios con `<label for="id">` si existen
+
 ## Convenciones
 
 ### Nombres de Archivos
@@ -122,7 +137,7 @@ Editar `src/css/dutti.css` para cambiar:
 
 ### Hero Section
 ```html
-<section class="mb-32 p-24" style="background-color: var(--hg-color-secondary);">
+<section class="hero-section mb-32 p-24">
   <div class="row">
     <div class="col-xs-12 col-md-8">
       <h1 class="h1 mb-16">Título Destacado</h1>
@@ -132,17 +147,31 @@ Editar `src/css/dutti.css` para cambiar:
 </section>
 ```
 
+**Estilos en `dutti.css`:**
+```css
+.hero-section {
+  background-color: var(--hg-color-secondary);
+}
+```
+
 ### Grid de Tarjetas
 ```html
 <div class="row mb-32">
   <div class="col-xs-12 col-md-4 mb-16">
-    <article class="p-16" style="background-color: var(--hg-color-light-grey);">
+    <article class="card p-16">
       <h3 class="h3 mb-8">Tarjeta 1</h3>
       <p class="text-m">Contenido...</p>
     </article>
   </div>
   <!-- Repetir para más tarjetas -->
 </div>
+```
+
+**Estilos en `dutti.css`:**
+```css
+.card {
+  background-color: var(--hg-color-light-grey);
+}
 ```
 
 ## Build

@@ -90,14 +90,33 @@ npm run clean                   # Limpiar _site/
 - Usar variables CSS de holygrail5: `var(--hg-color-*)`
 - Consultar [holygrail5 docs](https://holyguide.es/) antes de añadir estilos nuevos
 
-### 2. Layouts
+### 2. CSS
+- **NO usar CSS inline** en archivos HTML
+- Todos los estilos deben estar en:
+  - `src/css/docs.css` (para sección docs)
+  - `src/css/dutti.css` (para sección dutti)
+- Usar **clases de holygrail5** o crear **clases reutilizables** en los CSS
+- Ejemplo ❌ INCORRECTO: `style="background-color: var(--hg-color-primary);"`
+- Ejemplo ✅ CORRECTO: `class="bg-primary"` (definida en el CSS)
+
+### 3. Accesibilidad (OBLIGATORIO)
+- **Siempre cumplir normas de accesibilidad WCAG 2.1 nivel AA**
+- Usar **HTML semántico**: `<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`
+- Usar **roles ARIA** cuando sea necesario: `role="navigation"`, `aria-label`, `aria-describedby`
+- **Contraste de colores**: Mínimo 4.5:1 para texto normal, 3:1 para textos grandes
+- **Navegación por teclado**: Todos los elementos interactivos deben ser accesibles con Tab
+- **Alt text**: Toda imagen debe tener `alt` descriptivo
+- **Etiquetas en formularios**: Usar `<label>` con `for` attribute
+- **Headings jerárquicos**: No saltar niveles (h1 → h2 → h3, NO h1 → h3)
+
+### 4. Layouts
 - **Docs**: Layout con header, sidebar + content, footer
 - **Dutti**: Layout con header + content, footer (sin sidebar)
 - **Rutas de includes**: Usar rutas específicas:
   - `{% include 'components/docs/header.html' %}`
   - `{% include 'components/dutti/header.html' %}`
 
-### 3. Front Matter
+### 5. Front Matter
 Formato para páginas:
 ```yaml
 ---
@@ -106,18 +125,12 @@ title: Título
 ---
 ```
 
-### 4. Cambios No Intrusivos
+### 6. Cambios No Intrusivos
 - Mantener compatibilidad hacia atrás
 - Seguir patrones establecidos
 - Documentar cambios complejos
 
-### 5. CSS
-- Cada sección (docs/dutti) tiene su propio CSS
-- Ambos importan holygrail5
-- PostCSS procesa y genera CSS final
-- NO usar `<link>` a CDN, todo local
-
-### 6. Convenciones de Git
+### 7. Convenciones de Git
 - **Commits**: Conventional Commits (`feat:`, `fix:`, `chore:`, etc.)
 - **Branches**: `feature/nombre`, `hotfix/nombre`
 - **Squash and merge** para features
