@@ -1,0 +1,97 @@
+@import 'holygrail5/dist/output.css';
+
+// Variables
+$primary-color: var(--hg-color-primary);
+$white: var(--hg-color-white);
+$light-grey: var(--hg-color-light-grey);
+$dark-grey: var(--hg-color-dark-grey);
+
+// Mixins
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Sidebar
+.docs-aside {
+  background-color: $light-grey;
+  border-right: 2px solid $dark-grey;
+  width: 100%;
+  max-width: 250px;
+  min-height: 400px;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// Documentation layout
+.docs-layout {
+  display: flex;
+  flex-grow: 1;
+
+  main {
+    flex-grow: 1;
+  }
+
+  article {
+    padding: 1rem;
+
+    @media (min-width: 992px) {
+      padding: 1.5rem;
+    }
+  }
+}
+
+// Cards for documentation
+.card-featured {
+  background-color: $light-grey;
+  border-radius: 8px;
+
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+// Sidebar sections
+.sidebar-section {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        font-size: 0.875rem;
+        color: $primary-color;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
