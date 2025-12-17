@@ -74,6 +74,10 @@
   flex-flow: row wrap;
   gap: $hg-spacer-50 $hg-spacer-100;
   justify-content: flex-start;
+
+  @media (hover: hover) and (pointer: fine) {
+    a.md-anchor-link-line { opacity: inherit; color: red; }
+  }
 }
 
 

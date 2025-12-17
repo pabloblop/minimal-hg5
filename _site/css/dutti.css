@@ -14423,6 +14423,12 @@ div.card9-wrap .rat-content:hover .card9-add {
   gap: 0.25rem 0.5rem;
   justify-content: flex-start;
 }
+@media (hover: hover) and (pointer: fine) {
+  .md-tags-list a.md-anchor-link-line {
+    opacity: inherit;
+    color: red;
+  }
+}
 .md-breadcrumb {
   display: grid;
   grid-template-rows: 1fr;
@@ -15147,6 +15153,13 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+a:focus-visible {
+  outline: 2px solid var(--hg-color-primary);
+  outline-offset: 2px;
 }
 
 /*# sourceMappingURL=dutti.css.map */
