@@ -1820,14 +1820,6 @@ p, h1, h2, h3, h4, h5, h6 {
   --hg-transition-duration: 0.278s;
   --hg-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-html {
-  scroll-behavior: smooth;
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
 .hg-d-contents {
   display: contents;
 }
