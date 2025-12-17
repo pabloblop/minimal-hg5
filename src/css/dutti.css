@@ -14592,5 +14592,14 @@ div.card9-wrap .rat-content:hover .card9-add {
     margin-block-start: 2.5rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 /*# sourceMappingURL=dutti.css.map */

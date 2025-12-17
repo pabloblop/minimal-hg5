@@ -2,6 +2,16 @@
 @import '../../node_modules/holygrail2/scss/style.scss';
 @import 'dutti/pdp';
 
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 // Variables
 $primary-color: var(--hg-color-primary);
 $secondary-color: #f4f2ed;
